@@ -1,73 +1,71 @@
-import React,{ useEffect,useState } from 'react';
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
-import db from "../firebase"
+import db from "../firebase";
 function Detail() {
-    const { id } = useParams();
-    const [movie,setMovie] = useState();
-    //
-    // useEffect(()=>{
-    //     //Grab the movie info from DB
-    //     db.collection("movies")
-    //         .doc(id)
-    //         .get()
-    //         .then(()=>{
-    //             if(doc.exist){
-    //                 //save the movie data
-    //                 setMovie(doc.data());
-    //             }else{
-    //                 //redirect to home page
-    //
-    //             }
-    //         })
-    //
-    // },[])
-    // console.log(movie)
-    return (
-        <Container>
-            <Background>
-                <img
-                    src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/9C2152F120E2AAB1D65E394A9AA74E3F6A717D4E495495A96FDFD58CA85B8BBD/scale?width=1200&aspectRatio=1.78&format=jpeg"
-                    alt=""/>
-            </Background>
-            <ImageTitle>
-                <img src="https://lumiere-a.akamaihd.net/v1/images/image_1ebcc00d.png?region=0,0,400,170" alt=""/>
-            </ImageTitle>
-            <Controls>
-                <PlayButton>
-                    <img src="./images/play-icon-black.png" alt=""/>
-                    <span>PLAY</span>
-                </PlayButton>
-                <TrailerButton>
-                    <img src="./images/play-icon-white.png" alt=""/>
-                    <span>Trailer</span>
+  const { id } = useParams();
+  const [movie, setMovie] = useState();
 
-                </TrailerButton>
-                <AddButton>
-                    <span>+</span>
-                </AddButton>
-                <GroupWatchButton>
-                    <img src="./images/group-icon.png" alt=""/>
-                </GroupWatchButton>
-            </Controls>
-            <SubTitle>
-                2018 7m Family, Fantasy, Kids, Animation
-            </SubTitle>
-            <Description>
-                The Chinese mom from 'Bao' everyone knows
-            </Description>
-        </Container>
-    );
+  // useEffect(()=>{
+  //     //Grab the movie info from DB
+  //     db.collection("movies")
+  //         .doc(id)
+  //         .get()
+  //         .then(()=>{
+  //             if(doc.exist){
+  //                 //save the movie data
+  //                 setMovie(doc.data());
+  //             }else{
+  //                 //redirect to home page
+  //
+  //             }
+  //         })
+  //
+  // },[])
+  // console.log(movie)
+  return (
+    <Container>
+      <Background>
+        <img
+          src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/9C2152F120E2AAB1D65E394A9AA74E3F6A717D4E495495A96FDFD58CA85B8BBD/scale?width=1200&aspectRatio=1.78&format=jpeg"
+          alt=""
+        />
+      </Background>
+      <ImageTitle>
+        <img
+          src="https://lumiere-a.akamaihd.net/v1/images/image_1ebcc00d.png?region=0,0,400,170"
+          alt=""
+        />
+      </ImageTitle>
+      <Controls>
+        <PlayButton>
+          <img src="./images/play-icon-black.png" alt="" />
+          <span>PLAY</span>
+        </PlayButton>
+        <TrailerButton>
+          <img src="./images/play-icon-white.png" alt="" />
+          <span>Trailer</span>
+        </TrailerButton>
+        <AddButton>
+          <span>+</span>
+        </AddButton>
+        <GroupWatchButton>
+          <img src="./images/group-icon.png" alt="" />
+        </GroupWatchButton>
+      </Controls>
+      <SubTitle>2018 7m Family, Fantasy, Kids, Animation</SubTitle>
+      <Description>The Chinese mom from 'Bao' everyone knows</Description>
+    </Container>
+  );
 }
 
 export default Detail;
-
 
 const Container = styled.div`
   min-height: calc(100vh - 70px);
   padding: 0 calc(3.5vw + 5px);
   position: relative;
-`
+`;
 
 const Background = styled.div`
   position: fixed;
@@ -83,7 +81,7 @@ const Background = styled.div`
     height: 100%;
     object-fit: cover;
   }
-`
+`;
 
 const ImageTitle = styled.div`
   height: 30vh;
@@ -97,14 +95,12 @@ const ImageTitle = styled.div`
     height: 100%;
     object-fit: contain;
   }
-
-`
+`;
 
 const Controls = styled.div`
   display: flex;
   align-items: center;
-
-`
+`;
 const PlayButton = styled.button`
   border-radius: 4px;
   font-size: 15px;
@@ -121,14 +117,14 @@ const PlayButton = styled.button`
   &:hover {
     background-color: rgb(198, 198, 198);
   }
-`
+`;
 
 const TrailerButton = styled(PlayButton)`
   border: 1px solid rgb(249, 249, 249);
   background: rgba(0, 0, 0, 0.3);
   color: rgb(249, 249, 249);
   text-transform: uppercase;
-`
+`;
 
 const AddButton = styled.button`
   width: 44px;
@@ -145,27 +141,22 @@ const AddButton = styled.button`
   span {
     font-size: 30px;
     color: white;
-
   }
-`
+`;
 
 const GroupWatchButton = styled(AddButton)`
   background-color: rgb(0, 0, 0);
-`
+`;
 
 const SubTitle = styled.div`
   color: rgb(249, 249, 249);
   font-size: 15px;
   min-height: 20px;
   margin-top: 20px;
-`
+`;
 const Description = styled.div`
   line-height: 1.4;
   font-size: 20px;
   margin-top: 16px;
   max-width: 750px;
-`
-
-
-
-
+`;

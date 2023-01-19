@@ -1,45 +1,43 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 
-
 function Header() {
-    return (
-        <Nav>
-            <Logo src='./images/logo.svg'/>
+  return (
+    <Nav>
+      <Logo src="./images/logo.svg" />
 
-            <NavMenu>
-                <a>
-                    <img src="./images/home-icon.svg" alt="home"/>
-                    <span>HOME</span>
-                </a>
-                <a>
-                    <img src="./images/search-icon.svg" alt="search"/>
-                    <span>SEARCH</span>
-                </a>
-                <a>
-                    <img src="./images/watchlist-icon.svg" alt="watch-list"/>
-                    <span>WATCH LIST </span>
-                </a>
-                <a>
-                    <img src="./images/original-icon.svg" alt="original-icon"/>
-                    <span>ORIGINALS</span>
-                </a>
-                <a>
-                    <img src="./images/movie-icon.svg" alt="movie"/>
-                    <span>MOVIES</span>
-                </a>
-                <a>
-                    <img src="./images/series-icon.svg" alt="home"/>
-                    <span>SERIES</span>
-                </a>
-            </NavMenu>
-            <UserImg src='https://avt-6.foto.mail.ru/mail/alexandru.besleaga/_avatar180?'/>
-
-        </Nav>);
-};
+      <NavMenu>
+        <a>
+          <img src="./images/home-icon.svg" alt="home" />
+          <span>HOME</span>
+        </a>
+        <a>
+          <img src="./images/search-icon.svg" alt="search" />
+          <span>SEARCH</span>
+        </a>
+        <a>
+          <img src="./images/watchlist-icon.svg" alt="watch-list" />
+          <span>WATCH LIST </span>
+        </a>
+        <a>
+          <img src="./images/original-icon.svg" alt="original-icon" />
+          <span>ORIGINALS</span>
+        </a>
+        <a>
+          <img src="./images/movie-icon.svg" alt="movie" />
+          <span>MOVIES</span>
+        </a>
+        <a>
+          <img src="./images/series-icon.svg" alt="home" />
+          <span>SERIES</span>
+        </a>
+      </NavMenu>
+      <UserImg src="https://avt-6.foto.mail.ru/mail/alexandru.besleaga/_avatar180?" />
+    </Nav>
+  );
+}
 
 export default Header;
-
 
 const Nav = styled.div`
   height: 70px;
@@ -49,13 +47,11 @@ const Nav = styled.div`
   padding: 0 36px;
   cursor: pointer;
   overflow-x: hidden;
-
-`
+`;
 
 const Logo = styled.img`
   width: 80px;
-
-`
+`;
 
 const NavMenu = styled.div`
   display: flex;
@@ -70,7 +66,6 @@ const NavMenu = styled.div`
 
     img {
       height: 20px;
-
     }
 
     span {
@@ -79,7 +74,7 @@ const NavMenu = styled.div`
       position: relative;
 
       &:after {
-        content: '';
+        content: "";
         height: 2px;
         background-color: white;
         position: absolute;
@@ -99,11 +94,11 @@ const NavMenu = styled.div`
       }
     }
   }
-`
+`;
 
 const UserImg = styled.img`
   width: 50px;
   height: 50px;
   border-radius: 50%;
   cursor: pointer;
-`
+`;
